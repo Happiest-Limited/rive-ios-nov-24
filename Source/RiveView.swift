@@ -100,6 +100,8 @@ open class RiveView: RiveRendererView {
             }
         }
 
+        self.preferredFramesPerSecond = 5
+
         if #available(iOS 17, *) {
             registerForTraitChanges([UITraitDisplayScale.self]) { [weak self] (_: UITraitEnvironment, traitCollection: UITraitCollection) in
                 guard let self else { return }
